@@ -8,6 +8,7 @@ def insert_sort(x):
         x[i] = val
 
 
+#  http://ejklike.github.io/2017/03/04/sorting-algorithms-with-python.html
 if __name__ == '__main__':
     d = [2, 4, 5, 1, 3]
     insert_sort(d)

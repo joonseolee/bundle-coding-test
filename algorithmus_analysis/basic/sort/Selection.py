@@ -7,7 +7,6 @@ def selection_sort(x):
         x[max_i], x[size] = x[size], x[max_i]
 
 
-#  http://ejklike.github.io/2017/03/04/sorting-algorithms-with-python.html
 if __name__ == '__main__':
     d = [2, 4, 5, 1, 3]
     selection_sort(d)

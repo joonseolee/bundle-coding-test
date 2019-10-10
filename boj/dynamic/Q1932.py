@@ -1,6 +1,4 @@
-
-
-if __name__ == '__main__':
+def cal():
     n = int(input())
     num = []
     num.append(list(map(int, input().split())))
@@ -20,3 +18,26 @@ if __name__ == '__main__':
                 totalsum.append(lastsum[i - 1] + num[i][j])  # 가장 오른쪽
 
     print(max(totalsum))
+
+
+def cal2():  # 개선해서 만듦.
+    def cal():
+        size = int(input())
+        a = []  # Top
+        a.append(int(input()))
+        for _ in range(size - 1):
+            x = []
+            layer = list(map(int, input().split()))  # 각 층별
+            for step in range(len(layer)):
+                if step == 0:
+                    x.append(a[step] + layer[step])
+                elif len(layer) == step + 1:
+                    x.append(a[step - 1] + layer[step])
+                else:
+                    x.append(max(layer[step] + a[step - 1], layer[step] + a[step]))
+            a = x
+        print(max(a))
+
+
+if __name__ == '__main__':
+    cal2()

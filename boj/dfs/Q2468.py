@@ -4,11 +4,11 @@ import copy
 def cal():
     line = int(input())
     matrix = [list(map(int, input().split())) for _ in range(line)]
-    result = 0  # 만들수있는 최대 정사각형
+    result = 1  # 만들수있는 최대 정사각형
 
     loop_count = max(map(max, matrix))
 
-    for level in range(2, loop_count + 1):  # 최소 높이에서 최대 높이
+    for level in range(1, loop_count + 1):  # 최소 높이에서 최대 높이
         matrix_copy = copy.deepcopy(matrix)
         stack = []
         max_square = 0

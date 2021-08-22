@@ -1,4 +1,8 @@
 # Bundle-coding-test
+
+개발언어는 `Python`, `Javascript` 로 이루어져있다.
+
+
 * [목적](#목적)
 * [출처](#출처)
 

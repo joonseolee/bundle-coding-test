@@ -1,5 +1,6 @@
 // Run by Node.js
 // 가장 긴 증가하는 부분 수열 2
+// 가장 긴 증가하는 부분 수열 3 도 동일하게 풀림 
 
 const readline = require("readline");
 const rl = readline.createInterface({

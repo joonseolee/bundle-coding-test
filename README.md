@@ -18,6 +18,8 @@
 * [x] greedy
 * [x] bruteForce
 * [x] recursion
+* [ ] bfs
+
 
 ## 출처
 [자료구조](http://ejklike.github.io/2017/03/04/sorting-algorithms-with-python.html)

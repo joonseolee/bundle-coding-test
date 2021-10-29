@@ -13,21 +13,22 @@ rl.on("line", function(line) {
     input.push(line);
 }).on("close", function() {
     let number = Number(input[0]);
-    let count = 0;
-    const answer = [];
+    let result = '';
 
     const hanoi = (n, from, other, to) => {
         if (!n) return;
 
         hanoi(n - 1, from, to, other);
-        answer.push([from, to]);
-        count++;
+        result += from + ' ' + to + '\n';
 
         hanoi(n - 1, other, from, to);
     }
 
-    hanoi(number, 1, 2, 3);
-    console.log(count);
-    console.log(answer.map(i => i.join(' ')).join('\n'));
+    const count = String(BigInt((BigInt((BigInt(1) << BigInt(number))) - BigInt(1))));
+    console.log(count.slice(0, count.length));
+    if (number <= 20) {
+        hanoi(number, 1, 2, 3);
+        console.log(result);
+    }
 	process.exit();
 });

@@ -20,6 +20,8 @@
 * [x] bruteForce
 * [x] recursion
 * [ ] bfs
+* [ ] dfs
+* [ ] dp
 
 
 ## 출처

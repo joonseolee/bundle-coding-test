@@ -1,3 +1,5 @@
+# 별 찍기 문제 
+
 def add_star(ptn):
     return "* " + ptn + " *"
 

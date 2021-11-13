@@ -1,5 +1,6 @@
 // Run by Node.js
 // 3의 배수 
+// 이 문제는 좀 이상해서 이상태에서 패스 
 
 const readline = require("readline");
 const rl = readline.createInterface({
@@ -22,10 +23,11 @@ rl.on("line", function(line) {
         }
 
         number = Array.from(String(number))
-            .map(v => Number(v))
-            .reduce((acc, cur) => acc + parseInt(cur), 0);
+            .map(Number)
+            .reduce((acc, cur) => acc + cur, 0);
 
         cal(count + 1);
+        console.log('where are you? ' + count);
     }
 
     cal(0);

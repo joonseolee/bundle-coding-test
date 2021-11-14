@@ -65,3 +65,32 @@ rl.on("line", function(line) {
     call(0, 1);
 	process.exit();
 });
+
+// 다른사람들 코드가 더 괜찮아보여서 추가함.
+const solution = () => {
+    const cur = bracket.pop();
+    if (cur === ']' || cur === ')') {
+        let sum = 0;
+        while (bracket.length > 0 && bracket[bracket.length - 1] !== pair[cur]) {
+            sum += solution();
+        }
+        if (bracket[bracket.length - 1] === pair[cur]) {
+            bracket.pop();
+            return sum === 0 ? value[cur] : sum * value[cur];
+        } else return NaN;
+    } else return NaN;
+}
+
+const bracket = Array.from(input);
+const pair = {
+    ']' : '[',
+    ')' : '('
+}
+const value = {
+    ']' : 3,
+    ')' : 2
+}
+
+let result = 0;
+while (bracket.length !== 0)
+    result += solution();

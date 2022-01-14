@@ -19,6 +19,7 @@
 * [x] greedy
 * [x] bruteForce
 * [x] recursion
+* [x] two pointer
 * [ ] bfs
 * [ ] dfs
 * [ ] dp

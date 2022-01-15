@@ -20,6 +20,7 @@
 * [x] bruteForce
 * [x] recursion
 * [x] two pointer
+* [ ] binary 
 * [ ] bfs
 * [ ] dfs
 * [ ] dp
